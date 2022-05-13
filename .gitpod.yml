@@ -3,6 +3,7 @@ tasks:
       sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
       export PATH="/home/gitpod/.local/share/solana/install/active_release/bin:$PATH"
       eval $(gp env -e PATH=$HOME/.local/share/solana/install/active_release/bin:$PATH)
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
       npm install
       npm run build
     command: |
