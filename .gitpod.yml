@@ -4,9 +4,8 @@ tasks:
       export PATH="/home/gitpod/.local/share/solana/install/active_release/bin:$PATH"
       eval $(gp env -e PATH=$HOME/.local/share/solana/install/active_release/bin:$PATH)
       npm install
-      npm run build:program-rust
+      npm run build
     command: |
-      gp open README-gitpod.md
       solana-keygen new --no-bip39-passphrase -o keypair.json
       solana config set --keypair keypair.json
       solana config set --url localhost
